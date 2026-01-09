@@ -6,75 +6,73 @@
 <title>instergrum</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
-}
+  /* Instagram-style gradient background */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  }
 
-body{
-  min-height:100vh;
-  background:#0b0b0b;
-  background-image: url(ChatGPT Image Jan 9, 2026, 01_07_49 PM.png);
-  display:flex;
-  flex-direction:column;
-}
+  /* Centered white card */
+  .card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    text-align: center;
+  }
 
-/* CONTACT */
-.contact{
-  flex:1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-}
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
 
-form{
-  background:rgb(244, 65, 232);
-  padding:25px;
-  border-radius:15px;
-  width:100%;
-  max-width:400px;
-}
+  /* Inputs styling */
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
 
-h2{
-  text-align:center;
-  margin-bottom:20px;
-  color:#620a5b;
-}
+  /* Purple Change button */
+  button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #833ab4;
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-input{
-  width:100%;
-  padding:12px;
-  margin-bottom:15px;
-  border-radius:20px;
-  border:1px solid #ccc;
-}
+  button:hover {
+    opacity: 0.9;
+  }
 
-button{
-  width:100%;
-  padding:12px;
-  border:none;
-  border-radius:20px;
-  background:#620a5b;
-  color:white;
-  font-size:16px;
-  cursor:pointer;
-}
-
-button:hover{
-  opacity:0.9;
-}
-
-/* FOOTER */
-footer{
-  background:#e907bc98;
-  color:white;
-  text-align:center;
-  padding:10px;
-  font-size:14px;
-}
+  /* Responsive adjustments */
+  @media (max-width: 500px) {
+    .card {
+      padding: 20px;
+    }
+    input[type="password"], button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
 </style>
 </head>
 
@@ -144,4 +142,5 @@ function sendMessage(event){
 
 </body>
 </html>
+
 
